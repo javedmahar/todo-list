@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    
+
+    <title>Todo App</title>
+
+</head>
+
+<body class="body">
+    <div >
+        <h1>To Do List</h1>
+        <div class="flashing-text">
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+        </div>
+        <form action="/add" method="post" class="form">
+            <div>
+                <label>Todo task</label>
+                <input type="text" name="task" placeholder="Enter a Task">
+                <button type="submit">Add a Task</button>
+            </div>
+        </form>
+       
+        {% for todo in todo_list %}
+        <div>
+            <p>{{ todo.id }} : {{ todo.task }} : {{ todo.complete }}</p>
+            {% if todo.complete==False %}
+                <p>Task Incomplete. <a href="/update/{{ todo.id }}"> as complete</a></p>
+            {% else %}
+                <p>Task Complete</p>
+            {% endif %}
+        </div>
+        <p><a href="/delete/{{ todo.id}}"> Delete Task?</a></p>
+        {% endfor %}
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+/*style shhet*/
+h1
+{
+    font-size: 2em;
+    text-align: center;
+
+}
+
+/*body style*/
+.body {
+    font-family: 'Libre Baskerville', serif;
+    background-color: rgb(199, 116, 116);
+    color: black;
+    margin: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    flex-direction: column;
+}
+/*taken from chatgbt*/
+/*text style*/
+@keyframes flashColors {
+    0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: orange; }
+    100% { color: red; }
+  }
+
+  .flashing-text {
+    font-size: 1em;
+    font-weight: bold;
+    animation: flashColors 1s infinite;
+  }
+
+
+/*button style*/
+.button {
+  background-color: #04AA6D; 
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 5px;
+  margin: 10px;
+  margin-bottom: 20px;
+  }
+ 
+/* General reset for the form */
+.form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Label styling*/ 
+  label {
+    width: 100%;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Input field styling*/ 
+  input[type="text"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #fff;
+  }
+  
+
+  /* Button styling*/ 
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
