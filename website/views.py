@@ -32,8 +32,12 @@ def update(todo_id):
 
 @my_view.route("/delete/<todo_id>")
 def delete(todo_id):
-    todo = Todo.query.filter_by(id=todo_id).first()
-    db.session.delete(todo)
-    db.session.commit()
-    return redirect(url_for("my_view.home"))
+    try:
+        todo = Todo.query.filter_by(id=todo_id).first()
+        db.session.delete(todo)
+        db.session.commit()
+        return redirect(url_for("my_view.home"))
+    except:
+        message = "There was an error to delete your task. Please try again"
+    return redirect(url_for("my_view.home", message = message))
 
